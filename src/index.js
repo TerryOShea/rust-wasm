@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+const wasm = import("../build/react_rust_wasm");
 
-const bigComputation = () => alert('Big computation in JavaScript');
+wasm.then(wasm => {
+    const App = () => (
+        <div>
+            <h1>Hi there</h1>
+            <button onClick={bigComputation}>Run Computation</button>
+        </div>
+    );
 
-const App = () => (
-    <div>
-        <h1>Hi there</h1>
-        <button onClick={bigComputation}>Run Computation</button>
-    </div>
-);
-
-ReactDOM.render(<App />, document.getElementById("root"));
+    ReactDOM.render(<App />, document.getElementById("root"));
+});
