@@ -6,7 +6,7 @@ wasm.then(wasm => {
     const App = () => (
         <div>
             <h1>Hi there</h1>
-            <button onClick={bigComputation}>Run Computation</button>
+            <button onClick={wasm.big_computation}>Run Computation</button>
         </div>
     );
 
