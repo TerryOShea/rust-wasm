@@ -22,8 +22,8 @@ module.exports = env => {
             })
         ],
         externals: {
-            react: 'react',
-            reactDom: 'react-dom'
+            'react': 'React',
+            'react-dom': 'ReactDOM',
         },
         module: {
             rules: [
